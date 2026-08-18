@@ -1,1 +1,348 @@
-news.html
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MarketLens - Haberler</title>
+
+<style>
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0b0f14;
+  color: white;
+  padding-bottom: 80px;
+}
+
+header {
+  padding: 20px;
+  border-bottom: 1px solid #202731;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #00c896;
+}
+
+.container {
+  padding: 18px;
+}
+
+.back {
+  display: inline-block;
+  color: #00c896;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  margin-bottom: 15px;
+}
+
+.filter {
+  white-space: nowrap;
+  padding: 9px 13px;
+  border-radius: 20px;
+  background: #121820;
+  border: 1px solid #202936;
+  color: #aeb7c5;
+}
+
+.filter.active {
+  background: #00c896;
+  color: #07110d;
+  border-color: #00c896;
+}
+
+.news {
+  background: #121820;
+  border: 1px solid #202936;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.important {
+  border-left: 4px solid #ff5570;
+}
+
+.medium {
+  border-left: 4px solid #ffb020;
+}
+
+.normal {
+  border-left: 4px solid #00c896;
+}
+
+.tag {
+  font-size: 11px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.red {
+  color: #ff5570;
+}
+
+.orange {
+  color: #ffb020;
+}
+
+.green {
+  color: #00c896;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.description {
+  color: #8b95a5;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-top: 8px;
+}
+
+.meta {
+  color: #697383;
+  font-size: 11px;
+  margin-top: 12px;
+}
+
+.bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 65px;
+  background: #11161d;
+  border-top: 1px solid #202731;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bottom a {
+  color: #8b95a5;
+  text-decoration: none;
+  font-size: 11px;
+  text-align: center;
+}
+
+.bottom .active {
+  color: #00c896;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+Market<span>Lens</span>
+</div>
+
+</header>
+
+
+<div class="container">
+
+<a class="back" href="index.html">
+← Ana Sayfa
+</a>
+
+<h2>📰 Piyasa Haberleri</h2>
+
+
+<div class="filters">
+
+<div class="filter active">
+Tümü
+</div>
+
+<div class="filter">
+Türkiye
+</div>
+
+<div class="filter">
+ABD
+</div>
+
+<div class="filter">
+Kripto
+</div>
+
+<div class="filter">
+Şirketler
+</div>
+
+</div>
+
+
+<div class="news important">
+
+<div class="tag red">
+🔴 ÇOK ÖNEMLİ
+</div>
+
+<div class="title">
+ABD Merkez Bankası'nın faiz politikası piyasaların odağında
+</div>
+
+<div class="description">
+Faiz beklentilerindeki değişim; dolar, tahvil faizleri,
+teknoloji hisseleri ve altın üzerinde etkili olabilir.
+</div>
+
+<div class="meta">
+Demo haber • Piyasa
+</div>
+
+</div>
+
+
+<div class="news medium">
+
+<div class="tag orange">
+🟠 ÖNEMLİ
+</div>
+
+<div class="title">
+ABD teknoloji hisselerinde hareketlilik
+</div>
+
+<div class="description">
+Büyük teknoloji şirketlerinin performansı S&P 500 ve
+Nasdaq'ın genel yönü açısından takip ediliyor.
+</div>
+
+<div class="meta">
+Demo haber • ABD
+</div>
+
+</div>
+
+
+<div class="news medium">
+
+<div class="tag orange">
+🟠 ÖNEMLİ
+</div>
+
+<div class="title">
+Türkiye piyasalarında yatırımcıların gözü ekonomik verilerde
+</div>
+
+<div class="description">
+Enflasyon, faiz ve döviz hareketleri BIST şirketlerinin
+beklentilerini etkileyebilecek önemli faktörler arasında.
+</div>
+
+<div class="meta">
+Demo haber • Türkiye
+</div>
+
+</div>
+
+
+<div class="news normal">
+
+<div class="tag green">
+🟢 PİYASA
+</div>
+
+<div class="title">
+Altın ve Bitcoin hareketleri yatırımcıların radarında
+</div>
+
+<div class="description">
+Risk iştahı ve küresel ekonomik beklentiler yatırımcıların
+alternatif varlıklara olan ilgisini etkiliyor.
+</div>
+
+<div class="meta">
+Demo haber • Küresel Piyasalar
+</div>
+
+</div>
+
+
+<div class="news normal">
+
+<div class="tag green">
+🟢 ŞİRKET
+</div>
+
+<div class="title">
+Büyük şirketlerin bilanço sezonu yaklaşıyor
+</div>
+
+<div class="description">
+Şirketlerin gelir, kâr, borç ve gelecek beklentileri
+hisse fiyatları açısından yakından takip edilecek.
+</div>
+
+<div class="meta">
+Demo haber • Şirketler
+</div>
+
+</div>
+
+</div>
+
+
+<div class="bottom">
+
+<a href="index.html">
+⌂<br>
+Ana Sayfa
+</a>
+
+<a href="markets.html">
+📈<br>
+Piyasalar
+</a>
+
+<a class="active" href="news.html">
+📰<br>
+Haberler
+</a>
+
+<a href="calendar.html">
+📅<br>
+Takvim
+</a>
+
+<a href="stocks.html">
+🔎<br>
+Hisseler
+</a>
+
+</div>
+
+</body>
+</html>
