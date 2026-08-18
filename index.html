@@ -1,1 +1,278 @@
-index.html
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MarketLens</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0b0f14;
+      color: #ffffff;
+      padding-bottom: 80px;
+    }
+
+    header {
+      padding: 22px 18px;
+      border-bottom: 1px solid #202731;
+      background: #0b0f14;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #00c896;
+    }
+
+    .subtitle {
+      color: #8b95a5;
+      font-size: 13px;
+      margin-top: 5px;
+    }
+
+    .container {
+      padding: 18px;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 20px 0 12px;
+    }
+
+    .market-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .card {
+      background: #121820;
+      border: 1px solid #202936;
+      border-radius: 12px;
+      padding: 15px;
+    }
+
+    .name {
+      color: #8b95a5;
+      font-size: 13px;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 7px;
+    }
+
+    .positive {
+      color: #00c896;
+      font-size: 13px;
+      margin-top: 5px;
+    }
+
+    .negative {
+      color: #ff5570;
+      font-size: 13px;
+      margin-top: 5px;
+    }
+
+    .news {
+      background: #121820;
+      border: 1px solid #202936;
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 10px;
+    }
+
+    .tag {
+      font-size: 11px;
+      color: #ffb020;
+      margin-bottom: 7px;
+      font-weight: bold;
+    }
+
+    .news-title {
+      font-size: 15px;
+      line-height: 1.4;
+    }
+
+    .news-text {
+      color: #8b95a5;
+      font-size: 12px;
+      margin-top: 7px;
+      line-height: 1.4;
+    }
+
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 65px;
+      background: #11161d;
+      border-top: 1px solid #202731;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .nav-item {
+      color: #7f8998;
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .nav-item.active {
+      color: #00c896;
+    }
+
+    .nav-icon {
+      font-size: 19px;
+      margin-bottom: 3px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Market<span>Lens</span></div>
+  <div class="subtitle">Piyasayı anlayın. Veriye göre hareket edin.</div>
+</header>
+
+<div class="container">
+
+  <div class="section-title">📊 Günün Piyasası</div>
+
+  <div class="market-grid">
+
+    <div class="card">
+      <div class="name">BIST 100</div>
+      <div class="price">10.842</div>
+      <div class="positive">▲ +0.84%</div>
+    </div>
+
+    <div class="card">
+      <div class="name">S&P 500</div>
+      <div class="price">6.412</div>
+      <div class="positive">▲ +0.42%</div>
+    </div>
+
+    <div class="card">
+      <div class="name">NASDAQ</div>
+      <div class="price">21.455</div>
+      <div class="positive">▲ +0.71%</div>
+    </div>
+
+    <div class="card">
+      <div class="name">Bitcoin</div>
+      <div class="price">$118,420</div>
+      <div class="positive">▲ +1.23%</div>
+    </div>
+
+    <div class="card">
+      <div class="name">Altın</div>
+      <div class="price">$3,340</div>
+      <div class="positive">▲ +0.38%</div>
+    </div>
+
+    <div class="card">
+      <div class="name">USD/TRY</div>
+      <div class="price">40.92</div>
+      <div class="negative">▼ -0.12%</div>
+    </div>
+
+  </div>
+
+  <div class="section-title">🔥 Piyasayı Hareket Ettiren Haberler</div>
+
+  <div class="news">
+    <div class="tag">🔴 ÇOK ÖNEMLİ</div>
+    <div class="news-title">
+      ABD ekonomisinden gelen yeni veriler piyasaların odağında
+    </div>
+    <div class="news-text">
+      Yatırımcılar faiz beklentilerini ve tahvil piyasasındaki hareketleri takip ediyor.
+    </div>
+  </div>
+
+  <div class="news">
+    <div class="tag">🟠 ÖNEMLİ</div>
+    <div class="news-title">
+      Teknoloji hisselerinde hareketlilik devam ediyor
+    </div>
+    <div class="news-text">
+      Nasdaq ve S&P 500 içerisindeki büyük teknoloji şirketleri izleniyor.
+    </div>
+  </div>
+
+  <div class="section-title">🔄 Sektör Rotasyonu</div>
+
+  <div class="market-grid">
+
+    <div class="card">
+      <div class="name">Teknoloji</div>
+      <div class="positive">▲ Güçlü</div>
+    </div>
+
+    <div class="card">
+      <div class="name">Finans</div>
+      <div class="positive">▲ Güçlü</div>
+    </div>
+
+    <div class="card">
+      <div class="name">Enerji</div>
+      <div class="negative">▼ Zayıf</div>
+    </div>
+
+    <div class="card">
+      <div class="name">Sağlık</div>
+      <div class="negative">▼ Zayıf</div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="bottom-nav">
+
+  <div class="nav-item active">
+    <div class="nav-icon">⌂</div>
+    Ana Sayfa
+  </div>
+
+  <div class="nav-item">
+    <div class="nav-icon">📈</div>
+    Piyasalar
+  </div>
+
+  <div class="nav-item">
+    <div class="nav-icon">📰</div>
+    Haberler
+  </div>
+
+  <div class="nav-item">
+    <div class="nav-icon">📅</div>
+    Takvim
+  </div>
+
+  <div class="nav-item">
+    <div class="nav-icon">⭐</div>
+    Takip
+  </div>
+
+</div>
+
+</body>
+</html>
