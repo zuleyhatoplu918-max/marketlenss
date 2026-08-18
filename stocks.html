@@ -1,1 +1,346 @@
-stocks.html
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MarketLens - Hisseler</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0b0f14;
+  color: white;
+  padding-bottom: 80px;
+}
+
+header {
+  padding: 20px;
+  border-bottom: 1px solid #202731;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #00c896;
+}
+
+.container {
+  padding: 18px;
+}
+
+.back {
+  display: inline-block;
+  color: #00c896;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+.search {
+  width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #28313d;
+  background: #121820;
+  color: white;
+  font-size: 15px;
+  outline: none;
+}
+
+.search:focus {
+  border-color: #00c896;
+}
+
+.stock {
+  margin-top: 15px;
+  background: #121820;
+  border: 1px solid #202936;
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.symbol {
+  color: #00c896;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.company {
+  margin-top: 5px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.data {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.price {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.up {
+  color: #00c896;
+}
+
+.down {
+  color: #ff5570;
+}
+
+.info {
+  color: #8b95a5;
+  font-size: 12px;
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+.bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 65px;
+  background: #11161d;
+  border-top: 1px solid #202731;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bottom a {
+  color: #8b95a5;
+  text-decoration: none;
+  font-size: 11px;
+  text-align: center;
+}
+
+.bottom .active {
+  color: #00c896;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">Market<span>Lens</span></div>
+</header>
+
+<div class="container">
+
+<a class="back" href="index.html">← Ana Sayfa</a>
+
+<h2>🔎 Hisse Ara</h2>
+
+<input
+  class="search"
+  type="text"
+  id="search"
+  placeholder="Örn: THYAO, AAPL, NVDA..."
+  onkeyup="searchStocks()"
+>
+
+
+<div id="stocks">
+
+<div class="stock">
+
+<div class="symbol">THYAO</div>
+
+<div class="company">
+Türk Hava Yolları
+</div>
+
+<div class="data">
+
+<div class="price">
+Demo ₺286.40
+</div>
+
+<div class="up">
++1.42%
+</div>
+
+</div>
+
+<div class="info">
+F/K: 3.8 &nbsp; | &nbsp;
+PD/DD: 0.9
+<br>
+Sektör: Havacılık
+</div>
+
+</div>
+
+
+<div class="stock">
+
+<div class="symbol">EREGL</div>
+
+<div class="company">
+Ereğli Demir Çelik
+</div>
+
+<div class="data">
+
+<div class="price">
+Demo ₺28.70
+</div>
+
+<div class="down">
+-0.65%
+</div>
+
+</div>
+
+<div class="info">
+F/K: 11.2 &nbsp; | &nbsp;
+PD/DD: 0.8
+<br>
+Sektör: Demir & Çelik
+</div>
+
+</div>
+
+
+<div class="stock">
+
+<div class="symbol">AAPL</div>
+
+<div class="company">
+Apple
+</div>
+
+<div class="data">
+
+<div class="price">
+Demo $229.40
+</div>
+
+<div class="up">
++0.82%
+</div>
+
+</div>
+
+<div class="info">
+F/K: 31.4 &nbsp; | &nbsp;
+PD/DD: 45.1
+<br>
+Sektör: Teknoloji
+</div>
+
+</div>
+
+
+<div class="stock">
+
+<div class="symbol">NVDA</div>
+
+<div class="company">
+NVIDIA
+</div>
+
+<div class="data">
+
+<div class="price">
+Demo $182.70
+</div>
+
+<div class="up">
++1.86%
+</div>
+
+</div>
+
+<div class="info">
+F/K: 48.2 &nbsp; | &nbsp;
+PD/DD: 42.5
+<br>
+Sektör: Yarı İletken
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="bottom">
+
+<a href="index.html">
+⌂<br>
+Ana Sayfa
+</a>
+
+<a href="markets.html">
+📈<br>
+Piyasalar
+</a>
+
+<a href="news.html">
+📰<br>
+Haberler
+</a>
+
+<a href="calendar.html">
+📅<br>
+Takvim
+</a>
+
+<a class="active" href="stocks.html">
+🔎<br>
+Hisseler
+</a>
+
+</div>
+
+
+<script>
+
+function searchStocks() {
+
+  let input =
+    document.getElementById("search")
+    .value
+    .toUpperCase();
+
+  let stocks =
+    document.querySelectorAll(".stock");
+
+  stocks.forEach(function(stock) {
+
+    let text =
+      stock.innerText.toUpperCase();
+
+    if (text.includes(input)) {
+      stock.style.display = "block";
+    } else {
+      stock.style.display = "none";
+    }
+
+  });
+
+}
+
+</script>
+
+</body>
+</html>
