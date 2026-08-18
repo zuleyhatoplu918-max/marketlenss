@@ -1,346 +1,554 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>MarketLens - Hisseler</title>
+<title>MarketLens - Şirket Analizi</title>
 
 <style>
+
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
+box-sizing:border-box;
+margin:0;
+padding:0;
+font-family:Arial,sans-serif;
 }
 
 body {
-  background: #0b0f14;
-  color: white;
-  padding-bottom: 80px;
+background:#080c11;
+color:white;
+padding-bottom:90px;
 }
 
 header {
-  padding: 20px;
-  border-bottom: 1px solid #202731;
+padding:18px;
+border-bottom:1px solid #202733;
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: bold;
+font-size:24px;
+font-weight:bold;
 }
 
 .logo span {
-  color: #00c896;
+color:#00c896;
 }
 
 .container {
-  padding: 18px;
+padding:18px;
 }
 
 .back {
-  display: inline-block;
-  color: #00c896;
-  text-decoration: none;
-  margin-bottom: 20px;
-}
-
-h2 {
-  margin-bottom: 15px;
-}
-
-.search {
-  width: 100%;
-  padding: 15px;
-  border-radius: 12px;
-  border: 1px solid #28313d;
-  background: #121820;
-  color: white;
-  font-size: 15px;
-  outline: none;
-}
-
-.search:focus {
-  border-color: #00c896;
-}
-
-.stock {
-  margin-top: 15px;
-  background: #121820;
-  border: 1px solid #202936;
-  border-radius: 14px;
-  padding: 16px;
+display:inline-block;
+color:#00c896;
+text-decoration:none;
+margin-bottom:20px;
 }
 
 .symbol {
-  color: #00c896;
-  font-weight: bold;
-  font-size: 13px;
+color:#00c896;
+font-size:13px;
+font-weight:bold;
 }
 
 .company {
-  margin-top: 5px;
-  font-size: 17px;
-  font-weight: bold;
+font-size:25px;
+font-weight:bold;
+margin-top:5px;
 }
 
-.data {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 12px;
+.sector {
+color:#7f8998;
+font-size:12px;
+margin-top:6px;
 }
 
 .price {
-  font-size: 19px;
-  font-weight: bold;
+font-size:30px;
+font-weight:bold;
+margin-top:20px;
 }
 
-.up {
-  color: #00c896;
+.change {
+color:#00c896;
+margin-top:5px;
+font-size:14px;
 }
 
-.down {
-  color: #ff5570;
+.card {
+background:#111720;
+border:1px solid #202936;
+border-radius:14px;
+padding:16px;
+margin-top:12px;
+}
+
+.card-title {
+font-size:16px;
+font-weight:bold;
+margin-bottom:14px;
+}
+
+.metrics {
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+}
+
+.metric {
+background:#0d131a;
+border-radius:10px;
+padding:12px;
+}
+
+.metric-name {
+color:#7f8998;
+font-size:11px;
+}
+
+.metric-value {
+font-size:17px;
+font-weight:bold;
+margin-top:5px;
+}
+
+.chart {
+height:170px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#00c896;
+font-size:14px;
+background:#0d131a;
+border-radius:10px;
+}
+
+.good {
+color:#00c896;
+}
+
+.warning {
+color:#ffb020;
+}
+
+.risk {
+color:#ff5570;
 }
 
 .info {
-  color: #8b95a5;
-  font-size: 12px;
-  margin-top: 12px;
-  line-height: 1.5;
+color:#8792a2;
+font-size:12px;
+line-height:1.5;
 }
 
-.bottom {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 65px;
-  background: #11161d;
-  border-top: 1px solid #202731;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.news {
+border-top:1px solid #202936;
+padding:12px 0;
 }
 
-.bottom a {
-  color: #8b95a5;
-  text-decoration: none;
-  font-size: 11px;
-  text-align: center;
+.news:first-child {
+border-top:none;
 }
 
-.bottom .active {
-  color: #00c896;
+.news-title {
+font-size:13px;
+font-weight:bold;
 }
+
+.news-date {
+font-size:10px;
+color:#687383;
+margin-top:5px;
+}
+
+.bottom-nav {
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+height:68px;
+background:#0e131a;
+border-top:1px solid #202733;
+
+display:flex;
+justify-content:space-around;
+align-items:center;
+}
+
+.bottom-nav a {
+color:#727d8c;
+text-decoration:none;
+font-size:10px;
+text-align:center;
+}
+
+.bottom-nav .active {
+color:#00c896;
+}
+
+.icon {
+font-size:18px;
+margin-bottom:3px;
+}
+
 </style>
+
 </head>
+
 
 <body>
 
+
 <header>
-<div class="logo">Market<span>Lens</span></div>
+
+<div class="logo">
+Market<span>Lens</span>
+</div>
+
 </header>
+
 
 <div class="container">
 
-<a class="back" href="index.html">← Ana Sayfa</a>
 
-<h2>🔎 Hisse Ara</h2>
-
-<input
-  class="search"
-  type="text"
-  id="search"
-  placeholder="Örn: THYAO, AAPL, NVDA..."
-  onkeyup="searchStocks()"
->
+<a class="back" href="stocks.html">
+← Hisselere Dön
+</a>
 
 
-<div id="stocks">
-
-<div class="stock">
-
-<div class="symbol">THYAO</div>
+<div class="symbol">
+THYAO
+</div>
 
 <div class="company">
 Türk Hava Yolları
 </div>
 
-<div class="data">
+<div class="sector">
+✈️ Havacılık
+</div>
+
 
 <div class="price">
-Demo ₺286.40
+₺286.40
 </div>
 
-<div class="up">
-+1.42%
+<div class="change">
+▲ +1.42%
 </div>
 
+
+<!-- GRAFİK -->
+
+<div class="card">
+
+<div class="card-title">
+📈 Fiyat Grafiği
+</div>
+
+<div class="chart">
+Demo grafik — gerçek veri bağlanacak
+</div>
+
+</div>
+
+
+<!-- DEĞERLEME -->
+
+<div class="card">
+
+<div class="card-title">
+📊 Değerleme
+</div>
+
+<div class="metrics">
+
+
+<div class="metric">
+
+<div class="metric-name">
+F/K
+</div>
+
+<div class="metric-value">
+3.8
+</div>
+
+</div>
+
+
+<div class="metric">
+
+<div class="metric-name">
+PD/DD
+</div>
+
+<div class="metric-value">
+0.9
+</div>
+
+</div>
+
+
+<div class="metric">
+
+<div class="metric-name">
+FD/FAVÖK
+</div>
+
+<div class="metric-value">
+4.2
+</div>
+
+</div>
+
+
+<div class="metric">
+
+<div class="metric-name">
+Temettü Verimi
+</div>
+
+<div class="metric-value">
+%1.8
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- FİNANSAL DURUM -->
+
+<div class="card">
+
+<div class="card-title">
+💰 Finansal Durum
+</div>
+
+<div class="metrics">
+
+
+<div class="metric">
+
+<div class="metric-name">
+Ciro
+</div>
+
+<div class="metric-value">
+₺XXX M
+</div>
+
+</div>
+
+
+<div class="metric">
+
+<div class="metric-name">
+Net Kâr
+</div>
+
+<div class="metric-value good">
+₺XXX M
+</div>
+
+</div>
+
+
+<div class="metric">
+
+<div class="metric-name">
+Borç
+</div>
+
+<div class="metric-value warning">
+₺XXX M
+</div>
+
+</div>
+
+
+<div class="metric">
+
+<div class="metric-name">
+Kâr Marjı
+</div>
+
+<div class="metric-value">
+XX%
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- YATIRIMCI GÖZÜYLE -->
+
+<div class="card">
+
+<div class="card-title">
+🔎 Yatırımcı Gözüyle
 </div>
 
 <div class="info">
-F/K: 3.8 &nbsp; | &nbsp;
-PD/DD: 0.9
-<br>
-Sektör: Havacılık
-</div>
+
+Şirketin değerleme oranları, sektör ortalamaları,
+kârlılık yapısı, borçluluğu ve büyüme beklentileri
+birlikte değerlendirilmelidir.
+
+<br><br>
+
+Düşük F/K tek başına hissenin ucuz olduğu anlamına
+gelmez. Şirketin gelecekteki kâr kapasitesi,
+sektör koşulları ve bilanço kalitesi de incelenmelidir.
 
 </div>
 
-
-<div class="stock">
-
-<div class="symbol">EREGL</div>
-
-<div class="company">
-Ereğli Demir Çelik
 </div>
 
-<div class="data">
 
-<div class="price">
-Demo ₺28.70
-</div>
+<!-- RİSK -->
 
-<div class="down">
--0.65%
-</div>
+<div class="card">
 
+<div class="card-title">
+⚠️ Riskler
 </div>
 
 <div class="info">
-F/K: 11.2 &nbsp; | &nbsp;
-PD/DD: 0.8
-<br>
-Sektör: Demir & Çelik
-</div>
 
-</div>
+<span class="risk">●</span>
+Yakıt fiyatlarındaki değişimler
 
+<br><br>
 
-<div class="stock">
+<span class="risk">●</span>
+Döviz hareketleri
 
-<div class="symbol">AAPL</div>
+<br><br>
 
-<div class="company">
-Apple
-</div>
+<span class="warning">●</span>
+Küresel hava taşımacılığı talebi
 
-<div class="data">
+<br><br>
 
-<div class="price">
-Demo $229.40
-</div>
-
-<div class="up">
-+0.82%
-</div>
-
-</div>
-
-<div class="info">
-F/K: 31.4 &nbsp; | &nbsp;
-PD/DD: 45.1
-<br>
-Sektör: Teknoloji
-</div>
-
-</div>
-
-
-<div class="stock">
-
-<div class="symbol">NVDA</div>
-
-<div class="company">
-NVIDIA
-</div>
-
-<div class="data">
-
-<div class="price">
-Demo $182.70
-</div>
-
-<div class="up">
-+1.86%
-</div>
-
-</div>
-
-<div class="info">
-F/K: 48.2 &nbsp; | &nbsp;
-PD/DD: 42.5
-<br>
-Sektör: Yarı İletken
-</div>
-
-</div>
+<span class="warning">●</span>
+Makroekonomik koşullar
 
 </div>
 
 </div>
 
 
-<div class="bottom">
+<!-- HABERLER -->
+
+<div class="card">
+
+<div class="card-title">
+📰 Son Haberler
+</div>
+
+
+<div class="news">
+
+<div class="news-title">
+THYAO hakkında önemli gelişme
+</div>
+
+<div class="news-date">
+Demo haber
+</div>
+
+</div>
+
+
+<div class="news">
+
+<div class="news-title">
+Havacılık sektöründe yeni gelişmeler
+</div>
+
+<div class="news-date">
+Demo haber
+</div>
+
+</div>
+
+
+</div>
+
+
+<div style="
+color:#5f6978;
+font-size:10px;
+text-align:center;
+margin-top:20px;
+line-height:1.5;
+">
+
+Bu sayfadaki veriler DEMO amaçlıdır.
+Yatırım tavsiyesi değildir.
+
+</div>
+
+
+</div>
+
+
+<div class="bottom-nav">
+
 
 <a href="index.html">
-⌂<br>
+
+<div class="icon">⌂</div>
 Ana Sayfa
+
 </a>
+
 
 <a href="markets.html">
-📈<br>
+
+<div class="icon">📈</div>
 Piyasalar
+
 </a>
+
 
 <a href="news.html">
-📰<br>
+
+<div class="icon">📰</div>
 Haberler
+
 </a>
+
 
 <a href="calendar.html">
-📅<br>
+
+<div class="icon">📅</div>
 Takvim
+
 </a>
 
+
 <a class="active" href="stocks.html">
-🔎<br>
+
+<div class="icon">🔎</div>
 Hisseler
+
 </a>
+
 
 </div>
 
 
-<script>
-
-function searchStocks() {
-
-  let input =
-    document.getElementById("search")
-    .value
-    .toUpperCase();
-
-  let stocks =
-    document.querySelectorAll(".stock");
-
-  stocks.forEach(function(stock) {
-
-    let text =
-      stock.innerText.toUpperCase();
-
-    if (text.includes(input)) {
-      stock.style.display = "block";
-    } else {
-      stock.style.display = "none";
-    }
-
-  });
-
-}
-
-</script>
-
 </body>
+
 </html>
