@@ -1,1 +1,352 @@
-calendar.html
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MarketLens - Ekonomik Takvim</title>
+
+<style>
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0b0f14;
+  color: white;
+  padding-bottom: 80px;
+}
+
+header {
+  padding: 20px;
+  border-bottom: 1px solid #202731;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #00c896;
+}
+
+.container {
+  padding: 18px;
+}
+
+.back {
+  display: inline-block;
+  color: #00c896;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #8b95a5;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.event {
+  background: #121820;
+  border: 1px solid #202936;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.date {
+  color: #8b95a5;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.event-title {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.country {
+  color: #00c896;
+  font-size: 12px;
+  margin-top: 7px;
+}
+
+.impact {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 9px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.high {
+  background: rgba(255, 85, 112, 0.12);
+  color: #ff5570;
+}
+
+.medium {
+  background: rgba(255, 176, 32, 0.12);
+  color: #ffb020;
+}
+
+.low {
+  background: rgba(0, 200, 150, 0.12);
+  color: #00c896;
+}
+
+.why {
+  color: #8b95a5;
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 65px;
+  background: #11161d;
+  border-top: 1px solid #202731;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bottom a {
+  color: #8b95a5;
+  text-decoration: none;
+  font-size: 11px;
+  text-align: center;
+}
+
+.bottom .active {
+  color: #00c896;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+Market<span>Lens</span>
+</div>
+
+</header>
+
+
+<div class="container">
+
+<a class="back" href="index.html">
+← Ana Sayfa
+</a>
+
+<h2>📅 Ekonomik Takvim</h2>
+
+<div class="subtitle">
+Piyasaları hareket ettirebilecek önemli ekonomik gelişmeleri takip edin.
+</div>
+
+
+<div class="event">
+
+<div class="date">
+18 Ağustos
+</div>
+
+<div class="event-title">
+ABD Ekonomik Verileri
+</div>
+
+<div class="country">
+🇺🇸 ABD
+</div>
+
+<div class="impact high">
+🔴 YÜKSEK ETKİ
+</div>
+
+<div class="why">
+Faiz beklentileri, dolar ve ABD tahvil piyasası üzerinde etkili olabilir.
+</div>
+
+</div>
+
+
+<div class="event">
+
+<div class="date">
+19 Ağustos
+</div>
+
+<div class="event-title">
+ABD Enflasyon Verisi
+</div>
+
+<div class="country">
+🇺🇸 ABD
+</div>
+
+<div class="impact high">
+🔴 YÜKSEK ETKİ
+</div>
+
+<div class="why">
+Enflasyonun beklentilerden yüksek veya düşük gelmesi FED faiz beklentilerini değiştirebilir.
+</div>
+
+</div>
+
+
+<div class="event">
+
+<div class="date">
+20 Ağustos
+</div>
+
+<div class="event-title">
+TCMB Para Politikası Kararı
+</div>
+
+<div class="country">
+🇹🇷 Türkiye
+</div>
+
+<div class="impact high">
+🔴 YÜKSEK ETKİ
+</div>
+
+<div class="why">
+Faiz kararı BIST, bankacılık hisseleri, tahvil ve TL üzerinde önemli etkiler oluşturabilir.
+</div>
+
+</div>
+
+
+<div class="event">
+
+<div class="date">
+21 Ağustos
+</div>
+
+<div class="event-title">
+ABD İşsizlik Verileri
+</div>
+
+<div class="country">
+🇺🇸 ABD
+</div>
+
+<div class="impact medium">
+🟠 ORTA ETKİ
+</div>
+
+<div class="why">
+İşgücü piyasasının durumu ekonomik büyüme ve FED beklentileri açısından izlenir.
+</div>
+
+</div>
+
+
+<div class="event">
+
+<div class="date">
+22 Ağustos
+</div>
+
+<div class="event-title">
+PMI Verileri
+</div>
+
+<div class="country">
+🌎 Küresel
+</div>
+
+<div class="impact medium">
+🟠 ORTA ETKİ
+</div>
+
+<div class="why">
+Ekonomik aktivitenin hızlanıp yavaşladığına ilişkin erken göstergelerden biridir.
+</div>
+
+</div>
+
+
+<div class="event">
+
+<div class="date">
+Yaklaşan
+</div>
+
+<div class="event-title">
+FED Faiz Kararı
+</div>
+
+<div class="country">
+🇺🇸 ABD
+</div>
+
+<div class="impact high">
+🔴 ÇOK YÜKSEK ETKİ
+</div>
+
+<div class="why">
+Küresel hisse senetleri, dolar, altın, Bitcoin ve tahvil piyasalarında güçlü hareketlere neden olabilir.
+</div>
+
+</div>
+
+</div>
+
+
+<div class="bottom">
+
+<a href="index.html">
+⌂<br>
+Ana Sayfa
+</a>
+
+<a href="markets.html">
+📈<br>
+Piyasalar
+</a>
+
+<a href="news.html">
+📰<br>
+Haberler
+</a>
+
+<a class="active" href="calendar.html">
+📅<br>
+Takvim
+</a>
+
+<a href="stocks.html">
+🔎<br>
+Hisseler
+</a>
+
+</div>
+
+</body>
+</html>
