@@ -1,1 +1,314 @@
-markets.html
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MarketLens - Piyasalar</title>
+
+<style>
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0b0f14;
+  color: white;
+  padding-bottom: 80px;
+}
+
+header {
+  padding: 20px;
+  border-bottom: 1px solid #202731;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #00c896;
+}
+
+.container {
+  padding: 18px;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+.market {
+  background: #121820;
+  border: 1px solid #202936;
+  border-radius: 14px;
+  padding: 17px;
+  margin-bottom: 12px;
+}
+
+.market-name {
+  color: #8b95a5;
+  font-size: 13px;
+}
+
+.market-price {
+  font-size: 23px;
+  font-weight: bold;
+  margin-top: 7px;
+}
+
+.up {
+  color: #00c896;
+  margin-top: 5px;
+}
+
+.down {
+  color: #ff5570;
+  margin-top: 5px;
+}
+
+.info {
+  color: #8b95a5;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #00c896;
+  text-decoration: none;
+}
+
+.bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 65px;
+  background: #11161d;
+  border-top: 1px solid #202731;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bottom a {
+  color: #8b95a5;
+  text-decoration: none;
+  font-size: 11px;
+  text-align: center;
+}
+
+.bottom .active {
+  color: #00c896;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+Market<span>Lens</span>
+</div>
+
+</header>
+
+<div class="container">
+
+<a class="back" href="index.html">
+← Ana Sayfa
+</a>
+
+<h2>📊 Piyasalar</h2>
+
+
+<div class="market">
+
+<div class="market-name">
+BIST 100
+</div>
+
+<div class="market-price">
+10.842
+</div>
+
+<div class="up">
+▲ +0.84%
+</div>
+
+<div class="info">
+Türkiye'nin en önemli 100 şirketinden oluşan ana endeks.
+</div>
+
+</div>
+
+
+<div class="market">
+
+<div class="market-name">
+S&P 500
+</div>
+
+<div class="market-price">
+6.412
+</div>
+
+<div class="up">
+▲ +0.42%
+</div>
+
+<div class="info">
+ABD'nin 500 büyük şirketini takip eden önemli endeks.
+</div>
+
+</div>
+
+
+<div class="market">
+
+<div class="market-name">
+NASDAQ
+</div>
+
+<div class="market-price">
+21.455
+</div>
+
+<div class="up">
+▲ +0.71%
+</div>
+
+<div class="info">
+ABD teknoloji şirketlerinin yoğun olduğu endeks.
+</div>
+
+</div>
+
+
+<div class="market">
+
+<div class="market-name">
+Bitcoin
+</div>
+
+<div class="market-price">
+$118,420
+</div>
+
+<div class="up">
+▲ +1.23%
+</div>
+
+<div class="info">
+Bitcoin'in güncel piyasa fiyatı.
+</div>
+
+</div>
+
+
+<div class="market">
+
+<div class="market-name">
+Altın
+</div>
+
+<div class="market-price">
+$3,340
+</div>
+
+<div class="up">
+▲ +0.38%
+</div>
+
+<div class="info">
+Ons altın fiyatı.
+</div>
+
+</div>
+
+
+<div class="market">
+
+<div class="market-name">
+USD / TRY
+</div>
+
+<div class="market-price">
+40.92
+</div>
+
+<div class="down">
+▼ -0.12%
+</div>
+
+<div class="info">
+ABD dolarının Türk lirası karşısındaki değeri.
+</div>
+
+</div>
+
+
+<div class="market">
+
+<div class="market-name">
+ABD 10 Yıllık Tahvil
+</div>
+
+<div class="market-price">
+4.21%
+</div>
+
+<div class="up">
+▲ +0.03
+</div>
+
+<div class="info">
+ABD devlet tahvilinin 10 yıllık getirisi.
+</div>
+
+</div>
+
+</div>
+
+
+<div class="bottom">
+
+<a href="index.html">
+⌂<br>
+Ana Sayfa
+</a>
+
+<a class="active" href="markets.html">
+📈<br>
+Piyasalar
+</a>
+
+<a href="news.html">
+📰<br>
+Haberler
+</a>
+
+<a href="calendar.html">
+📅<br>
+Takvim
+</a>
+
+<a href="stocks.html">
+🔎<br>
+Hisseler
+</a>
+
+</div>
+
+</body>
+</html>
